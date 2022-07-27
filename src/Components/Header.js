@@ -28,7 +28,7 @@ function Header() {
       >
         <ul className="lg:flex">
           <li className={menuClass}>
-            <a href="#">HOME</a>
+            <a href="/profile">Profile</a>
           </li>
           <li className={menuClass}>
             <a href="#">My NFTs</a>
