@@ -1,7 +1,7 @@
 import React from "react";
-import backgroundImg from "./assets/images/bg2.jpeg";
+import backgroundImg from "../assets/images/bg2.jpeg";
 import styles from "./Profile.module.css";
-import profilePicImg from "./assets/images/dp.jpeg";
+import profilePicImg from "../assets/images/dp.jpeg";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
