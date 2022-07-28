@@ -1,0 +1,71 @@
+.profile-section {
+    background-color: #72A0C1;
+    height: 100vh;
+}
+
+.background-container {
+    width: 100vw;
+    height: 45vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.background-img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+}
+
+.profile-container {
+    position: absolute;
+    height: 60vh;
+    width: 80%;
+    left: 50%;
+    top: 35vh;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.profile-pic-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid white;
+    margin: auto;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 200%;
+    object-fit: cover;
+}
+
+.profile-name, .location {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    margin-top: 110px;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.location {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-icon {
+    margin-right: 5px;
+}
