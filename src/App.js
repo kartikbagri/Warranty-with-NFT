@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 // import {ethers} from "ethers"
 import Home from "./Components/Home";
-import Profile from "./Components/Profile";
+import Profile from "./Components/Profile/Profile";
 
 // import {Routes as Routes} from "react-router-dom";
 

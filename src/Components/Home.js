@@ -59,7 +59,7 @@ const Home = () => {
                 <>
                     <div><button onClick={getData}>Data</button></div>
                     <div className="main">
-                        <div class="p-3 mb-2 bg-primary text-white">
+                        <div class="p-3 mb-2 text-white">
                             <Header />
                             <Hero />
                             <TopNFT />
