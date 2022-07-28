@@ -31,7 +31,7 @@ function Header() {
             <a href="/profile">Profile</a>
           </li>
           <li className={menuClass}>
-            <a href="#">My NFTs</a>
+            <a href="/mynfts">My NFTs</a>
           </li>
         </ul>
         <ConnectButton chainStatus="icon" showBalance={false} accountStatus="address" />

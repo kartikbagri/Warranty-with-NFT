@@ -1,21 +1,22 @@
 import React from 'react'
 import NFTCard from "./NFTCard";
+import Row from 'react-bootstrap/Row';
 
 
-const NftContainer = ({nfts}) => {
+const NftContainer = ({ nfts }) => {
     console.log(nfts)
     var nftcontainerData = ""
     console.log(nfts.length)
-    if(nfts.length){
-        nftcontainerData = nfts.map((data,index) => 
-                
-            <NFTCard nft={data} key={index}/>
+    if (nfts.length) {
+        nftcontainerData = nfts.map((data, index) =>
+
+            <NFTCard nft={data} key={index} />
         )
     }
     return (
-        <div className='nft-container' style={{ display: 'flex' }}>
+        <Row xs={1} md={4} className="justify-content-sm-evenly">
             {nftcontainerData}
-        </div>
+        </Row>
     )
 }
 export default NftContainer;
