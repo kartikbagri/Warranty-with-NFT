@@ -13,7 +13,7 @@ const NftContainer = ({nfts}) => {
         )
     }
     return (
-        <div className='nft-container'>
+        <div className='nft-container' style={{ display: 'flex' }}>
             {nftcontainerData}
         </div>
     )
