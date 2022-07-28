@@ -3,6 +3,7 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 // import {ethers} from "ethers"
 import Home from "./Components/Home";
 import Profile from "./Components/Profile";
+import MyNfts from "./Components/MyNfts";
 
 // import {Routes as Routes} from "react-router-dom";
 
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route exact path="/profile">
           <Profile />
+        </Route>
+        <Route exact path="/mynfts">
+          <MyNfts />
         </Route>
       </Switch>
     </Router>

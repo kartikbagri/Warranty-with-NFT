@@ -1,0 +1,25 @@
+import React, { useState } from 'react'
+import NftContainer from './NftContainer';
+import Header from './Header';
+const MyNfts = () => {
+    const [data, setData] = useState([])
+    const options = { method: 'GET', headers: { Accept: "application/json" } };
+
+    fetch('https://testnets-api.opensea.io/api/v1/assets?owner=0xD69bcfb20C58C59bB1F0E86a44104BaE1d86cA03&order_direction=desc&offset=0&limit=20&include_orders=false', options)
+        .then(response => response.json())
+        .then(response => {
+            setData(response.assets);
+            console.log(response.assets)
+        })
+        .catch(err => console.error(err));
+
+    return (
+        <div className='main' style={{ height: "100vh" }}>
+            <div className='text-black'>
+                <NftContainer nfts={data} />
+            </div>
+        </div>
+    );
+}
+
+export default MyNfts;
