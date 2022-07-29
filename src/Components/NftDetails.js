@@ -22,7 +22,7 @@ const NftDetails = (props) => {
                         <h3 className={styles['field']}>{nft.collection.name}</h3>
                         <hr className={styles['collection-name']}></hr>
                         <p className={styles['field']}>Owned by <span className="text-primary">{nft.creator.user.username}</span></p>
-                        <p className={styles['field']}>Created on: {nft['asset_contract']['created_date']}</p>
+                        <p className={styles['field']}>Created on: {nft['asset_contract']['created_date'].substring(0, 10)}</p>
                         {(5 - nft['num_sales']) ?<p className={styles['field']}>This item can be sold {5 - nft['num_sales']} more times</p>: <p className={styles['field']}>This item cannot be sold.</p>}
                         <p className={styles['field']}>6 months warranty left</p>
                         <h3 className={styles['price']}>$ {nft['asset_contract']['opensea_seller_fee_basis_points'].toFixed(2)}</h3>
