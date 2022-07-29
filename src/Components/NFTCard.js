@@ -2,12 +2,15 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import { useHistory } from "react-router-dom";
 
 const NFTCard = (props) => {
+  const history = useHistory();
   const { nft, index} = props;
   const onClickHandler = () => {
     // console.log("clicked");
     props.onClick(nft.id);
+    history.push('/nftDetails');
   }
   return (
     <Col>
@@ -18,7 +21,9 @@ const NFTCard = (props) => {
           <Card.Text>
             {nft.description}
           </Card.Text>
-          <Button variant="primary" style={{backgroundColor : 'black', color : 'white'}} onClick = {onClickHandler}><a href='/nftDetail'>Link</a></Button>
+          <Button variant="primary" style={{backgroundColor : 'black', color : 'white'}} onClick = {onClickHandler}>
+            Link
+          </Button>
         </Card.Body>
       </Card>
     </Col>
