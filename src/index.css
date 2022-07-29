@@ -32,6 +32,7 @@ body{
 
 .main{
   background: linear-gradient(268.43deg, #93216C 5.3%, #23073A 53.26%);
+
 }
 .bt-linear{
   background: linear-gradient(90deg, #FD399B 0%, #3EAAE9 109.89%);
@@ -95,10 +96,6 @@ html {
 
 body {
   margin: 0
-}
-
-main {
-  display: block
 }
 
 h1 {
