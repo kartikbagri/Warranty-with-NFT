@@ -43,7 +43,7 @@ const Home = () => {
             <RainbowKitProvider coolMode chains={chains}>
                 <>
                     {/* <div><button onClick={getData}>Data</button></div> */}
-                    <div className="main">
+                    <div className="main p-3">
                         <div class="mb-2 text-white">
                             <Header />
                             <Hero />

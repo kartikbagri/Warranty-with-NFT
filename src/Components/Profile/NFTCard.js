@@ -11,7 +11,6 @@ const NFTCard = () => {
             <div className={styles['nft-info']}>
                 <h3 className={styles['nft-title']}>Most expensive cat</h3>
                 <p className={styles['nft-date']}>Owned since 11th January 2021</p>
-                <Button variant="outline-primary">View More</Button>{' '}
             </div>
         </div>
     )

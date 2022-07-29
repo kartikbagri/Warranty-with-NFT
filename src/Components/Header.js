@@ -7,7 +7,7 @@ import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <Navbar className={`${styles['navbar']} fixed-top "p-3 w-100"`} variant="dark">
+    <Navbar className={`${styles['navbar']} "p-3 w-100"`} variant="dark">
       <Container>
         <Navbar.Brand href="/">Warranty with NFT</Navbar.Brand>
         <Nav className="me-auto">
@@ -15,7 +15,9 @@ const Header = () => {
           <Nav.Link href="/mynfts">My NFTs</Nav.Link>
         </Nav>
       </Container>
+      <div style={{width: "170px"}}>
       <ConnectButton chainStatus="icon" showBalance={false} accountStatus="address" />
+      </div>
     </Navbar>
   )
 }
