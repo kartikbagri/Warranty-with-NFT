@@ -41,8 +41,6 @@ function App() {
   const [nftId, setNftId] = useState('');
 
   const nftCardHandler = (id) => {
-    console.log("In nftCardHandler");
-    console.log(id);
     setNftId(id);
   }
   {console.log(nftId)}
@@ -60,7 +58,7 @@ function App() {
               <Route exact path="/mynfts">
                 <MyNfts onCardClick ={nftCardHandler} />
               </Route>
-              <Route exact path='/nftDetail'>
+              <Route exact path='/nftDetails'>
                 <NftDetails nft={ nftId } />
               </Route>
             </Switch>
