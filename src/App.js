@@ -4,7 +4,6 @@ import Home from "./Components/Home";
 import Profile from "./Components/Profile/Profile";
 import MyNfts from "./Components/MyNfts";
 import NftDetails from './Components/NftDetails';
-import Header from "./Components/Header";
 
 import '@rainbow-me/rainbowkit/dist/index.css';
 import {

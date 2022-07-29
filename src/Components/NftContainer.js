@@ -7,12 +7,11 @@ const NftContainer = (props) => {
     var nftcontainerData = "";
     if (props.nfts.length) {
         nftcontainerData = props.nfts.map((data, index) =>
-
             <NFTCard nft={data} key={index} onClick={props.onCardClick} />
         )
     }
     return (
-        <Row xs={1} md={4} className="justify-content-sm-evenly">
+        <Row xs={2} md={4} className="justify-content-sm-evenly">
             {nftcontainerData}
         </Row>
     )

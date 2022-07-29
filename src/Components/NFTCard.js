@@ -15,14 +15,14 @@ const NFTCard = (props) => {
   return (
     <Col>
       <Card style={{height : "23rem"}}>
-        <Card.Img variant="top" src={nft.image_preview_url}   style={{height:"15rem", width : "15rem"}} />
-        <Card.Body>
+        <Card.Img variant="top" src={nft.image_preview_url}   style={{height:"15rem", width : "15rem", margin : 'auto'}} />
+        <Card.Body className="text-center">
           <Card.Title>{nft.name}</Card.Title>
-          <Card.Text>
+          <Card.Text className="mb-2">
             {nft.description}
           </Card.Text>
           <Button variant="primary" style={{backgroundColor : 'black', color : 'white'}} onClick = {onClickHandler}>
-            Link
+            Details
           </Button>
         </Card.Body>
       </Card>

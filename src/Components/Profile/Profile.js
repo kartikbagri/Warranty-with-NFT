@@ -17,7 +17,7 @@ const Profile = () => {
           <div className={styles['background-container']}>
             <img className={styles['background-img']} src={backgroundImg} alt="background" />
           </div>
-          <div className={styles['profile-container']}>
+          <div className={`${styles['profile-container']} mb-2`}>
               <div classNae={styles['profile-top__middle']}>
                 <div className={styles['profile-pic-container']}>
                   <img className={styles['profile-pic']} src={profilePicImg} alt="profile" />
