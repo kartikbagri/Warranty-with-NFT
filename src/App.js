@@ -2,12 +2,8 @@ import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 // import {ethers} from "ethers"
 import Home from "./Components/Home";
-<<<<<<< HEAD
 import Profile from "./Components/Profile/Profile";
-=======
-import Profile from "./Components/Profile";
 import MyNfts from "./Components/MyNfts";
->>>>>>> 6186376e749795fabe95a9b1ef392c7db003a6ca
 
 // import {Routes as Routes} from "react-router-dom";
 
