@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const Profile = () => {
     return (
       <>
-        {/* <Header /> */}
+        <Header />
         <div className={styles['profile-section']}>
           <div className={styles['background-container']}>
             <img className={styles['background-img']} src={backgroundImg} alt="background" />
@@ -35,8 +35,8 @@ const Profile = () => {
                 </div>
               </div>
               <div className={styles['profile-progress-bar']}>
-                <p className={`mb-3 ${styles['progress-text']}`}>Own 3 more NFTs to become <span className="fw-bold">Elite</span> member!</p>
-                <ProgressBar variant="success" now={40} />
+                <p className={`mb-3 ${styles['progress-text']}`}>Own 2 more NFTs to become <span className="fw-bold">Elite</span> member!</p>
+                <ProgressBar striped variant="success" now={60} />
               </div>
             </div>
             <Link to="/mynfts" className={styles['view-all-link']}>View All NFTs</Link>
