@@ -5,13 +5,13 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 const menuClass =
   "text-whites font-semibold tracking-widest text-sm my-6 lg:my-0 lg:mx-6 hover:text-blue transitione";
 
-function Header() {
+const Header = () => {
   const [show, setShow] = useState(true);
   return (
     <div className="grid grid-cols-4 justify-center items-center relative">
-      <a href="/" className="lg:col-span-1 col-span-2">
+      {/* <a href="/" className="lg:col-span-1 col-span-2">
         <img src="logo.png" alt="Logo" className="w-32" />
-      </a>
+      </a> */}
       <div className="col-span-2 flex lg:hidden justify-end">
         <button
           onClick={() => setShow(!show)}
@@ -28,10 +28,10 @@ function Header() {
       >
         <ul className="lg:flex">
           <li className={menuClass}>
-            <a href="/profile">Profile</a>
+            {/* <a href="/profile">Profile</a> */}
           </li>
           <li className={menuClass}>
-            <a href="/mynfts">My NFTs</a>
+            {/* <a href="/mynfts">My NFTs</a> */}
           </li>
         </ul>
         <ConnectButton chainStatus="icon" showBalance={false} accountStatus="address" />

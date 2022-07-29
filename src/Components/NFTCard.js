@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 const NFTCard = (props) => {
   const { nft, index} = props;
   const onClickHandler = () => {
-    console.log("clicked");
+    // console.log("clicked");
     props.onClick(nft.id);
   }
   return (

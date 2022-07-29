@@ -3,7 +3,7 @@ import NFTCard from "./NFTCard";
 import Row from 'react-bootstrap/Row';
 
 
-const NftContainer = ({ nfts , onCardClick}) => {
+const NftContainer = ({ nfts , onCardClick }) => {
     console.log(nfts)
     const onCardClickHandler = (id) => {
         onCardClick(id);

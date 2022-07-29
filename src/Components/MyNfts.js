@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import NftContainer from './NftContainer';
 import Header from './Header';
-const MyNfts = () => {
+const MyNfts = (props) => {
     const [data, setData] = useState([])
     const options = { method: 'GET', headers: { Accept: "application/json" } };
 
@@ -19,7 +19,7 @@ const MyNfts = () => {
     return (
         <div className='main' style={{ height: "100vh" }}>
             <div className='text-black'>
-                <NftContainer nfts={data} />
+                <NftContainer onCardClick={props.onCardClick} nfts={data} />
             </div>
         </div>
     );
