@@ -18,7 +18,11 @@ const NFTCard = (props) => {
         <Card.Img variant="top" src={nft.image_preview_url}   style={{height:"15rem", width : "15rem", margin : 'auto'}} />
         <Card.Body className="text-center">
           <Card.Title>{nft.name}</Card.Title>
-          <Card.Text className="mb-2">
+          <Card.Text className="mb-2" style={{
+            'text-overflow': 'ellipsis',
+            overflow: 'hidden',
+            'white-space': 'nowrap'
+          }}>
             {nft.description}
           </Card.Text>
           <Button variant="primary" style={{backgroundColor : 'black', color : 'white'}} onClick = {onClickHandler}>
