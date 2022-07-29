@@ -1,30 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-// import {ethers} from "ethers"
 import Home from "./Components/Home";
 import Profile from "./Components/Profile/Profile";
 import MyNfts from "./Components/MyNfts";
-
-// import {Routes as Routes} from "react-router-dom";
-
-
-
-
+import NftDetails from './Components/NftDetails';
 
 function App() {
-  // const [account,setAccount] = useState("");
+  const [nftId, setNftId] = useState('');
 
-  // const { address, isConnecting, isDisconnected } = useAccount()
-  // let {isConnected} = useAccount()
-  // console.log(useAccount)
-
-  // const balance = useBalance({
-  //   addressOrName: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
-  // })
-  // console.log(balance)
-  // console.log(useAccount.length);
-  console.log('Helloo');
-
+  const nftCardHandler = (id) => {
+    console.log("In nftCardHandler");
+    console.log(id);
+    setNftId(id);
+  }
+  {console.log(nftId)}
   return (
     <Router>
       <Switch>
@@ -35,7 +24,10 @@ function App() {
           <Profile />
         </Route>
         <Route exact path="/mynfts">
-          <MyNfts />
+          <MyNfts onCardClick ={nftCardHandler} />
+        </Route>
+        <Route exact path='/nftDetail'>
+          <NftDetails nft={ nftId } />
         </Route>
       </Switch>
     </Router>

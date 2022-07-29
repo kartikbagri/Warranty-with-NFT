@@ -3,7 +3,12 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 
-const NFTCard = ({ nft, index }) => {
+const NFTCard = (props) => {
+  const { nft, index} = props;
+  const onClickHandler = () => {
+    console.log("clicked");
+    props.onClick(nft.id);
+  }
   return (
     <Col>
       <Card style={{height : "23rem"}}>
@@ -13,7 +18,7 @@ const NFTCard = ({ nft, index }) => {
           <Card.Text>
             {nft.description}
           </Card.Text>
-          <Button variant="primary" style={{backgroundColor : 'black', color : 'white'}}><a href={nft.permalink} target="_blank">Link</a></Button>
+          <Button variant="primary" style={{backgroundColor : 'black', color : 'white'}} onClick = {onClickHandler}><a href='/nftDetail'>Link</a></Button>
         </Card.Body>
       </Card>
     </Col>
