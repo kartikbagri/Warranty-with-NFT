@@ -7,6 +7,20 @@ const NftDetails = (props) => {
     console.log("In NftDetails");
     console.log(props.nft);
     const nft = props.nft;
+    let priceItem, warrantyItem, validTillItem
+    {nft['traits'].map((trait) => {
+        if(trait['trait_type'] == 'Price'){
+            priceItem = trait['value'];
+        }
+        else if(trait['trait_type'] == 'Warranty'){
+            warrantyItem = trait['value'];
+        }
+        else if(trait['trait_type'] == 'Valid Till'){
+            validTillItem = trait['value'];
+        }
+    })}
+    const isInWarranty = (warrantyItem != 0);
+    const warrantyText = isInWarranty ? `${warrantyItem} warranty left`: "Warranty Expired";
     return (
         <>
             <Header />
@@ -23,11 +37,11 @@ const NftDetails = (props) => {
                         <hr className={styles['collection-name']}></hr>
                         <p className={styles['field']}>Owned by <span className="text-primary">{nft.creator.user.username}</span></p>
                         <p className={styles['field']}>Created on: {nft['asset_contract']['created_date'].substring(0, 10)}</p>
-                        {(5 - nft['num_sales']) ?<p className={styles['field']}>This item can be sold {5 - nft['num_sales']} more times</p>: <p className={styles['field']}>This item cannot be sold.</p>}
-                        <p className={styles['field']}>6 months warranty left</p>
-                        <h3 className={styles['price']}>$ {nft['asset_contract']['opensea_seller_fee_basis_points'].toFixed(2)}</h3>
-                        <Button className={styles['btn']} href={nft['permalink']} target="_blank" variant='outline-primary'>Trade</Button>
-                        <Button className={`${styles['btn']} ${styles['warranty-btn']} bg-primary`} href={nft['permalink']} target="_blank" variant='primary'>Claim Warranty</Button>
+                        {/* {(5 - nft['num_sales']) ?<p className={styles['field']}>This item can be sold {5 - nft['num_sales']} more times</p>: <p className={styles['field']}>This item cannot be sold.</p>} */}
+                        <p className={`${styles['field']} ${isInWarranty? '' : 'text-danger'}`} > {warrantyText} </p>
+                        <h3 className={styles['price']}> Rs. {priceItem}</h3>
+                        <Button className={styles['btn']} href={nft['permalink']} disabled = {!isInWarranty ? true : false }   target="_blank" variant='outline-primary'>Trade</Button>
+                        <Button className={`${styles['btn']} ${styles['warranty-btn']} bg-primary`} disabled = {!isInWarranty ? true : false } href="https://www.flipkart.com/" target="_blank" variant='primary'>Claim Warranty</Button>
                     </div>
                     <div className={styles['container']}>
                         <h1 className={styles['title']}>Description</h1>
@@ -36,6 +50,7 @@ const NftDetails = (props) => {
                     <div className={styles['container']}>
                         <h1 className={styles['title']}>Specifications</h1>
                         {nft['traits'].map((trait) => {
+                            if(trait['trait_type'] == 'Price'|| trait['trait_type'] == 'Warranty') return ;
                             return <p className={styles['field']} key={trait['trait_type']}>{trait['trait_type']}: {trait['value']}</p>
                         })}
                     </div>

@@ -6,8 +6,8 @@ function Hero() {
     <div className="lg:grid grid-cols-2 gap-3 items-center">
       <div className="col-span-1 py-12 lg:py-0">
         <h1 className="2xl:text-5xl lg:text-4xl sm:text-5xl text-4xl leading-snug 2xl:leading-snug sm:leading-snug lg:leading-snug font-head text-whites tracking-wide">
-          Buy Sell authetic items <br />
-          <span className="text-pink">Timeless Warranty </span>
+          Track,Trade & Sell <br/> Authetic items <br />
+          <span className="text-pink">Timebound Warranty </span>
           <span className="text-blue"> By NFTs</span>
         </h1>
         <p className="font-medium text-lightBlack mt-3">
