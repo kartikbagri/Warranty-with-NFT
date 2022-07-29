@@ -4,6 +4,10 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Profile from "./Components/Profile/Profile";
 import MyNfts from "./Components/MyNfts";
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8b2b86d83fbec0dd422ca4e9a9b64b54fd0b843
 
 // import {Routes as Routes} from "react-router-dom";
 

@@ -766,7 +766,7 @@ video {
 }
 
 .border-8{
-  border-width: 8px;
+  border-width: 3px;
 }
 
 .border-whites{
@@ -781,7 +781,7 @@ video {
 
 .border-subLightMain{
   --tw-border-opacity: 1;
-  border-color: rgb(117 41 178 / var(--tw-border-opacity));
+  border-color: #72A0C1;
 }
 
 .bg-whites{
@@ -791,12 +791,14 @@ video {
 
 .bg-pink{
   --tw-bg-opacity: 1;
-  background-color: rgb(253 57 155 / var(--tw-bg-opacity));
+  /* background-color: rgb(253 57 155 / var(--tw-bg-opacity)); */
+  background-color: #e5e7eb
 }
 
 .bg-subMain{
   --tw-bg-opacity: 1;
-  background-color: rgb(80 37 115 / var(--tw-bg-opacity));
+  /* background-color: rgb(44 62 100 / var(--tw-bg-opacity)); */
+  background-color: rgb(47, 82, 152);
 }
 
 .bg-overlay{
@@ -949,7 +951,7 @@ video {
 
 .text-blue{
   --tw-text-opacity: 1;
-  color: rgb(62 170 233 / var(--tw-text-opacity));
+  color: #88dbff;
 }
 
 .text-lightBlack{
@@ -998,11 +1000,13 @@ input:focus,
 }
 
 .main{
-  background: linear-gradient(268.43deg, #93216C 5.3%, #23073A 53.26%);
+  background: linear-gradient(to left, #182848, #4b6cb7); 
+  /* background: linear-gradient(to right, #24c6dc, #514a9d); */
+  
 }
 
 .bt-linear{
-  background: linear-gradient(90deg, #FD399B 0%, #3EAAE9 109.89%);
+  background:#000000;
 }
 
 .hero{
@@ -1010,7 +1014,7 @@ input:focus,
 }
 
 .count{
-  background: linear-gradient(180deg, #7529B3 36.04%, #FD399B 100%);
+  background: linear-gradient(to top, #24c6dc, #514a9d);
 }
 
 .top-hidden{
