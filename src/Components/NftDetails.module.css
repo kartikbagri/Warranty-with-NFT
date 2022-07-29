@@ -14,10 +14,6 @@
     overflow: hidden;
 }
 
-.image {
-    height: 100%;
-}
-
 .title {
     font-size: 2rem;
     font-weight: bold;
@@ -67,4 +63,8 @@
     padding: 5px;
     font-size: 1.2rem;
     margin-bottom: 20px;
+}
+
+.image {
+    width: 70%;
 }
