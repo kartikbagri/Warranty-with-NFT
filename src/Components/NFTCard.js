@@ -9,7 +9,7 @@ const NFTCard = (props) => {
   const { nft, index} = props;
   const onClickHandler = () => {
     // console.log("clicked");
-    props.onClick(nft.id);
+    props.onClick(nft);
     history.push('/nftDetails');
   }
   return (

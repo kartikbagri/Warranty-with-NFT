@@ -1,0 +1,70 @@
+.top-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 4;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image {
+    height: 100%;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.container {
+    padding: 20px 40px;
+    flex: 1;
+}
+
+.btn {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    margin-right: 20px;
+}
+
+.warranty-btn:hover {
+    background-color: white!important;
+    color: #0d6efd!important;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+
+}
+
+.nft-details-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.field {
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.price {
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.collection-name {
+    padding: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
