@@ -9,7 +9,7 @@ import Header from '../Header';
 import { Link } from "react-router-dom";
 
 
-const Profile = () => {
+const Profile = (props) => {
     return (
       <>
         <Header />
@@ -40,7 +40,7 @@ const Profile = () => {
               </div>
             </div>
             <Link to="/mynfts" className={styles['view-all-link']}>View All NFTs</Link>
-            <OwnedNFTCarousel />
+            <OwnedNFTCarousel nfts={props.nfts}/>
           </div>
         </div>
       </>

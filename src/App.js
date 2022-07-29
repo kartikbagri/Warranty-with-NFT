@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Profile from "./Components/Profile/Profile";
 import MyNfts from "./Components/MyNfts";
 import NftDetails from './Components/NftDetails';
+
 
 import '@rainbow-me/rainbowkit/dist/index.css';
 import {
@@ -37,7 +38,19 @@ const wagmiClient = createClient({
 })
 
 function App() {
+
   const [nftId, setNftId] = useState('');
+  const [allNfts, setAllNfts] = useState([]);
+
+  useEffect(() => {
+    const options = { method: 'GET', headers: { Accept: "application/json" } };
+    fetch('https://testnets-api.opensea.io/api/v1/assets?owner=0xD69bcfb20C58C59bB1F0E86a44104BaE1d86cA03&order_direction=desc&offset=0&limit=20&include_orders=false', options)
+        .then(response => response.json())
+        .then(response => {
+            setAllNfts(response.assets);
+        })
+            .catch(err => console.error(err));
+    }, []);
 
   const nftCardHandler = (id) => {
     setNftId(id);
@@ -52,7 +65,7 @@ function App() {
                 <Home />
               </Route>
               <Route exact path="/profile">
-                <Profile />
+                <Profile nfts={ allNfts }/>
               </Route>
               <Route exact path="/mynfts">
                 <MyNfts onCardClick ={nftCardHandler} />

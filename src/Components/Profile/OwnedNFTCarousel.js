@@ -22,7 +22,7 @@ const responsive = {
     }
 };
 
-const OwnedNFTCarousel = () => {
+const OwnedNFTCarousel = (props) => {
     return (
         <Carousel
             swipeable={true}
@@ -39,12 +39,9 @@ const OwnedNFTCarousel = () => {
             removeArrowOnDeviceType={["tablet", "mobile"]}
             itemClass="carousel-item-padding-40-px"
         >
-            <NFTCard />
-            <NFTCard />
-            <NFTCard />
-            <NFTCard />
-            <NFTCard />
-            <NFTCard />
+            {props.nfts.map((data, index) => 
+                <NFTCard nft={data} key={index} />
+            )}
         </Carousel>
     )
 }
