@@ -3,6 +3,7 @@ import backgroundImg from "../../assets/images/bg2.jpeg";
 import styles from "./Profile.module.css";
 import profilePicImg from "../../assets/images/dp.jpeg";
 import OwnedNFTCarousel from "./OwnedNFTCarousel";
+import ProgressBar from 'react-bootstrap/ProgressBar';
 import { Link } from "react-router-dom";
 
 
@@ -21,7 +22,8 @@ const Profile = () => {
           <span class={`material-symbols-outlined ${styles['location-icon']}`}>location_on</span>
             Delhi, India
           </h3>
-          <Link to="/" className={styles['view-all-link']}>View All NFTs</Link>
+          <Link to="/mynfts" className={styles['view-all-link']}>View All NFTs</Link>
+          <ProgressBar variant="success" now={40} />
           <OwnedNFTCarousel />
         </div>
       </div>
