@@ -13,7 +13,7 @@ const NftDetails = (props) => {
             <div className={styles['nft-details-section']}>
                 <div className={`${styles['top-container']} mt-5`}>
                     <div className={styles['image-container']}>
-                        <img src={nft['image_preview_url']} className={styles['image']} alt='image'></img>
+                        <img src={nft['image_url']} className={styles['image']} alt='image'></img>
                     </div>
                 </div>
                 <div className={`${styles['middle-container']} mt-5`}>

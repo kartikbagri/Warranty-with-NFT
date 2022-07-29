@@ -13,9 +13,9 @@ const NFTCard = (props) => {
     history.push('/nftDetails');
   }
   return (
-    <Col>
-      <Card style={{height : "23rem"}}>
-        <Card.Img variant="top" src={nft.image_preview_url}   style={{height:"15rem", width : "15rem", margin : 'auto'}} />
+    <Col className="d-flex justify-content-sm-center">
+      <Card style={{height : "23rem", width : "20rem", marginBottom : "50px"}}>
+        <Card.Img variant="top" src={nft.image_url}   style={{height:"15rem", width : "15rem", margin : 'auto'}} />
         <Card.Body className="text-center">
           <Card.Title>{nft.name}</Card.Title>
           <Card.Text className="mb-2" style={{

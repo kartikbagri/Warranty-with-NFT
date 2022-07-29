@@ -19,7 +19,7 @@ const MyNfts = (props) => {
     return (
         <>
             <Header />
-            <div className='main' style={{ height: "100vh" }}>
+            <div className='main' style={{ minHeight: "100vh" }}>
                 <div className='text-black'>
                     <NftContainer onCardClick={props.onCardClick} nfts={data} />
                 </div>

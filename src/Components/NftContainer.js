@@ -11,7 +11,7 @@ const NftContainer = (props) => {
         )
     }
     return (
-        <Row xs={2} md={4} className="justify-content-sm-evenly">
+        <Row xs={2} md={3} className="justify-content-sm-evenly">
             {nftcontainerData}
         </Row>
     )
