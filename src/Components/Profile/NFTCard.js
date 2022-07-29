@@ -6,7 +6,7 @@ const NFTCard = (props) => {
     return (
         <div className={styles['nft-card']}>
             <div className={styles['image-container']}>
-                <img className={styles['image']} src={props.nft.image_preview_url} alt="nft" />
+                <img className={styles['image']} src={props.nft.image_url} alt="nft" />
             </div>
             <div className={styles['nft-info']}>
                 <h3 className={styles['nft-title']}>{props.nft.name}</h3>
