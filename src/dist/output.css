@@ -1005,6 +1005,10 @@ input:focus,
   
 }
 
+.ScratchCard__Container {
+  margin: auto;
+}
+
 .bt-linear{
   background:#000000;
 }
