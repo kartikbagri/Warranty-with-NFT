@@ -32,7 +32,7 @@ const Scratch = (props) =>
     </ScratchCard>
 
 const Scratchcard = () => {
-    const prizes=['Flipkart Rs. 100 Voucher', 'Flipkart Rs. 1000', 'Flipkart Rs. 500'];
+    const prizes=['Flipkart Rs. 100 Voucher', 'Flipkart Rs. 1000 Voucher', 'Flipkart Rs. 500 Voucher'];
     return (
     <>
         <Header />
