@@ -21,6 +21,7 @@ const NftDetails = (props) => {
     })}
     const isInWarranty = (warrantyItem != 0);
     const warrantyText = isInWarranty ? `${warrantyItem} warranty left`: "Warranty Expired";
+    const reSaleText = isInWarranty ? `This NFT has been resold ${nft.num_sales} times` : "Cant be resold"
     return (
         <>
             <Header />
@@ -39,7 +40,7 @@ const NftDetails = (props) => {
                         <p className={styles['field']}>Created on: {nft['asset_contract']['created_date'].substring(0, 10)}</p>
                         {/* {(5 - nft['num_sales']) ?<p className={styles['field']}>This item can be sold {5 - nft['num_sales']} more times</p>: <p className={styles['field']}>This item cannot be sold.</p>} */}
                         <p className={`${styles['field']} ${isInWarranty? '' : 'text-danger'}`} > {warrantyText} </p>
-                        <p className = {styles['field']}>This NFT has been resold {nft.num_sales} times</p>
+                        <p className = {`${styles['field']} ${isInWarranty? '' : 'text-danger'}`}> {reSaleText} </p>
                         <h3 className={styles['price']}> Rs. {priceItem}</h3>
                         <Button className={styles['btn']} href={nft['permalink']} disabled = {!isInWarranty ? true : false }   target="_blank" variant='outline-primary'>Trade</Button>
                         <Button className={`${styles['btn']} ${styles['warranty-btn']} bg-primary`} disabled = {!isInWarranty ? true : false } href="https://www.flipkart.com/" target="_blank" variant='primary'>Claim Warranty</Button>
