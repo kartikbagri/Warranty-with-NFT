@@ -19,6 +19,7 @@ import {
 } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
+import Scratchcard from "./Components/Scratchcard";
 
 const { chains, provider } = configureChains(
     [chain.mainnet, chain.polygon, chain.optimism, chain.rinkeby],
@@ -72,6 +73,9 @@ function App() {
               </Route>
               <Route exact path='/nftDetails'>
                 <NftDetails nft={ nftId } />
+              </Route>
+              <Route exact path='/scratchcard'>
+                <Scratchcard />
               </Route>
             </Switch>
           </Router>

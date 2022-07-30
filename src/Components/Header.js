@@ -13,6 +13,7 @@ const Header = () => {
         <Nav className="me-auto">
           <Nav.Link href="/profile">My Profile</Nav.Link>
           <Nav.Link href="/mynfts">My NFTs</Nav.Link>
+          <Nav.Link href="/scratchcard">My Scratch Cards</Nav.Link>
         </Nav>
       </Container>
       <div style={{width: "170px"}}>
