@@ -1,5 +1,7 @@
 import React from "react";
 import CountDown from "./CountFunction";
+import imgSrc from '../assets/images/img.png';
+
 
 function Hero() {
   return (
@@ -23,7 +25,7 @@ function Hero() {
       </div>
       <div className="hero lg:block hidden">
         <img
-          src="/images/img.png"
+          src={imgSrc}
           alt="Main"
           className="w-75 h-75 object-contain mt-5"
         />

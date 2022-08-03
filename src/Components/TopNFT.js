@@ -1,55 +1,63 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import Heading from "./Heading";
+import imgSrc1 from "../assets/images/1.png";
+import imgSrc2 from "../assets/images/2.png";
+import imgSrc3 from "../assets/images/3.png";
+import imgSrc4 from "../assets/images/4.png";
+import imgSrc5 from "../assets/images/5.jpg";
+import imgSrc6 from "../assets/images/6.jpg";
+import imgSrc7 from "../assets/images/7.jpg";
+import imgSrc8 from "../assets/images/8.jpg";
 
 const TopNfts = [
   {
     id: "1",
     name: "3D Abstract Hand",
     price: "ETH 9.31",
-    image: "/images/1.png",
+    image: imgSrc1,
   },
   {
     id: "2",
     name: "3D Abstract Hand",
     price: "ETH 12.31",
-    image: "/images/2.png",
+    image: imgSrc2,
   },
   {
     id: "3",
     name: "2D Abstract Lips",
     price: "ETH 89.01",
-    image: "/images/3.png",
+    image: imgSrc3,
   },
   {
     id: "4",
     name: "3D Abstract Mouth",
     price: "ETH 0.41",
-    image: "/images/4.png",
+    image: imgSrc4,
   },
   {
     id: "5",
     name: "3D Abstract Hand",
     price: "ETH 9.31",
-    image: "/images/5.jpg",
+    image: imgSrc5,
   },
   {
     id: "6",
     name: "3D Abstract Hand",
     price: "ETH 12.31",
-    image: "/images/6.jpg",
+    image: imgSrc6,
   },
   {
     id: "7",
     name: "2D Abstract Lips",
     price: "ETH 89.01",
-    image: "/images/7.jpg",
+    image: imgSrc7,
   },
   {
     id: "8",
     name: "3D Abstract Mouth",
     price: "ETH 0.41",
-    image: "/images/8.jpg",
+    image: imgSrc8,
   },
 ];
 
